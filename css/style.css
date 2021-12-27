@@ -4,17 +4,23 @@
   font-family: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
 }
+
+.fas.fa-bars {
+  display: none;
+}
+
 .hero {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   background-image: url(../img/background.jpeg);
   background-size: cover;
   background-position: center;
 }
+
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top: 45px;
   padding-left: 8%;
   padding-right: 8%;
@@ -56,12 +62,14 @@ nav ul li a:hover {
 .btn:hover {
   transform: scale(1.2);
 }
+
 .content {
   position: absolute;
   top: 50%;
-  left: 8%;
+  left: 5%;
   transform: translateY(-50%);
 }
+
 h1 {
   color: white;
   margin: 20px 0px 20px;
@@ -77,12 +85,12 @@ h4 {
   letter-spacing: 2px;
   font-size: 20px;
 }
-.newslatter form {
-  width: 380px;
-  max-width: 100%;
+.newsletter form {
+  width: 100%;
+  /* max-width: 100%; */
   position: relative;
 }
-.newslatter form input:first-child {
+.newsletter form input:first-child {
   display: inline-block;
   width: 100%;
   padding: 14px 130px 14px 15px;
@@ -90,7 +98,7 @@ h4 {
   outline: none;
   border-radius: 30px;
 }
-.newslatter form input:last-child {
+.newsletter form input:last-child {
   position: absolute;
   display: inline-block;
   outline: none;
@@ -111,18 +119,19 @@ h4 {
 }
 .about img {
   height: auto;
-  width: 430px;
+  width: 50%;
 }
 .about-text {
-  width: 550px;
+  width: 50%;
+  padding: 1.25rem;
 }
 .main {
-  width: 1130px;
-  max-width: 95%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .about-text h2 {
   color: white;
@@ -168,7 +177,7 @@ button:hover {
 .title h2 {
   color: white;
   font-size: 75px;
-  width: 1130px;
+  width: 100%;
   margin: 30px auto;
   text-align: center;
 }
@@ -179,9 +188,9 @@ button:hover {
   min-height: 400px;
 }
 .card {
-  height: 365px;
-  width: 335px;
-  padding: 20px 35px;
+  height: auto;
+  width: 33%;
+  padding: 1.2rem 2rem;
   background: #191919;
   border-radius: 20px;
   margin: 15px;
@@ -262,6 +271,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 footer p:nth-child(1) {
   font-size: 30px;
   color: white;
@@ -300,4 +310,15 @@ footer p:nth-child(2) {
   color: tomato;
   bottom: 35px;
   font-size: 14px;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 680px) {
+  nav .btn {
+    display: none;
+  }
+
+  .fas.fa-bars {
+    display: block;
+  }
 }
